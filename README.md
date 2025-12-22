@@ -55,3 +55,6 @@ Evaluate alignment:
 ```
 python code/eval.py
 ```
+
+## License
+This project is licensed under the MIT License
